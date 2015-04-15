@@ -1,11 +1,11 @@
 var request = require('supertest');
 
-describe('UsersController', function() {
+describe('IndexController', function() {
 
   describe('should access index', function() {
     it('should access index', function (done) {
       request(sails.hooks.http.app)
-        .post('/')
+        .get('/')
         .expect(200, done);
     });
   });
@@ -13,7 +13,7 @@ describe('UsersController', function() {
   describe('shouldnt access home', function() {
     it('shouldnt access home', function (done) {
       request(sails.hooks.http.app)
-        .post('/home')
+        .get('/home')
         .expect(404, done);
     });
   });
