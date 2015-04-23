@@ -8,9 +8,7 @@ describe('UsersController', function() {
 
       req.post('/user')
         .send({ name: 'test', password: 'test', hash: 'cc1bf1a62115d5ec900e660f5e3ad9f3' })
-        .expect(200, done);
-
-      
+        .expect(200, done);      
     });
   });
   
